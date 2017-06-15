@@ -6,7 +6,7 @@
   "mysqlDs": {
     "host": "localhost",
     "port": 3306,
-    "database": "getting_started_intermediate",
+    "database": "developerskills",
     "user": "root",
     "password": "",
     "name": "mysqlDs",
@@ -16,7 +16,7 @@
     "host": "localhost",
     "port": 27017,
     "url": "",
-    "database": "getting_started_intermediate",
+    "database": "developerskills",
     "user": "",
     "password": "",
     "name": "mongoDs",

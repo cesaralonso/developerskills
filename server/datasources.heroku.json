@@ -1,0 +1,17 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongoDs": {
+    "host": "ds127892.mlab.com",
+    "port": 27892,
+    "url": "",
+    "database": "developerskills",
+    "user": "${MONGOLAB_USER}",
+    "password": "${MONGOLAB_PASSWORD}",
+    "name": "mongoDs",
+    "connector": "mongodb"
+  }
+
+}

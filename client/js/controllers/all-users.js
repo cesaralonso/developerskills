@@ -1,5 +1,4 @@
 
-
 angular
   .module('app')
   .controller('AllUsersController', ['$scope', 'AuthService', '$state', 'User',

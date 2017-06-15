@@ -19,7 +19,7 @@ module.exports = function(app) {
   function createReviewers(cb) {
     mongoDs.automigrate('Reviewer', function(err) {
       if (err) return cb(err);
-      
+
       /*
       var Reviewer = app.models.Reviewer;
       Reviewer.create([{
@@ -35,12 +35,12 @@ module.exports = function(app) {
       if (err) return cb(err);
       var Technology = app.models.Technology;
        
-      /*Technology.create([{
-        name: 'ANGULAR 4',
+      Technology.create([{
+        name: 'ANGULARJS',
         points: 5,
-        version: 1.2
+        version: 1.6
       }], cb);
-      */
+
     });
   }
   //create reviews

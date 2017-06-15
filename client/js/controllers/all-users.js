@@ -2,12 +2,12 @@
 
 angular
   .module('app')
-  .controller('AllUsersController', ['$scope', 'AuthService', '$state', 'Reviewers',
-      function($scope, AuthService, $state, Reviewers) {
+  .controller('AllUsersController', ['$scope', 'AuthService', '$state', 'User',
+      function($scope, AuthService, $state, User) {
 
           $scope.users = [];
 
-          Reviewers.find()
+          User.find()
             .$promise
             .then(function(users){
                 $scope.users = users;

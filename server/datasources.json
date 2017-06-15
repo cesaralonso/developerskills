@@ -3,15 +3,6 @@
     "name": "db",
     "connector": "memory"
   },
-  "mysqlDs": {
-    "host": "localhost",
-    "port": 3306,
-    "database": "developerskills",
-    "user": "root",
-    "password": "",
-    "name": "mysqlDs",
-    "connector": "mysql"
-  },
   "mongoDs": {
     "host": "localhost",
     "port": 27017,

@@ -66,7 +66,7 @@ angular
         templateUrl: 'views/all-users.html',
         controller: 'AllUsersController'
       });
-    $urlRouterProvider.otherwise('all-reviews');
+    $urlRouterProvider.otherwise('my-reviews');
   }])
   .run(['$rootScope', '$state', 'LoopBackAuth', 'AuthService', function($rootScope, $state, LoopBackAuth, AuthService) {
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {

@@ -1,42 +1,51 @@
-<section>  
+<section>
+  <div class="container">
+
   <h2>{{ action }} revisión</h2>
-  <hr>
-  <form name="form" ng-submit="submitForm()">
+    <div class="row">
+      <div class="col-md-5 col-md-offset-3">
+        <h3>Nueva revisión</h3>
+        <hr>
+        <form name="form" ng-submit="submitForm()">
 
-      <div class="form-group">
-        <label>Tecnología</label>
-        <select
-            ng-disabled="isDisabled"
-            ng-model="selectedTechnology"
-            ng-options="technology as technology.name for technology in technologies"></select>
+          <div class="form-group">
+            <label class="text-left">Tecnología:</label>
+            <select
+                    class="form-control"
+                    ng-disabled="isDisabled"
+                    ng-model="selectedTechnology"
+                    ng-options="technology as technology.name for technology in technologies">
+            </select>
+          </div>
+          <div class="rating-content">
+            <label class="text-left">Habilidad </label>
+            <fieldset class="rating pull-left">
+              <input ng-model="review.rating" type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
+              <input ng-model="review.rating" type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" ></label>
+              <input ng-model="review.rating" type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" ></label>
+              <input ng-model="review.rating" type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" ></label>
+              <input ng-model="review.rating" type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" ></label>
+            </fieldset>
+          </div>
+          <div class="rating-content">
+            <label class="text-left">Empatía </label>
+            <fieldset class="rating pull-left">
+              <input ng-model="review.ratingEmpatia" type="radio" id="star5-e" name="ratingEmpatia" value="5" /><label class = "full" for="star5-e" ></label>
+              <input ng-model="review.ratingEmpatia" type="radio" id="star4-e" name="ratingEmpatia" value="4" /><label class = "full" for="star4-e" ></label>
+              <input ng-model="review.ratingEmpatia" type="radio" id="star3-e" name="ratingEmpatia" value="3" /><label class = "full" for="star3-e" ></label>
+              <input ng-model="review.ratingEmpatia" type="radio" id="star2-e" name="ratingEmpatia" value="2" /><label class = "full" for="star2-e" ></label>
+              <input ng-model="review.ratingEmpatia" type="radio" id="star1-e" name="ratingEmpatia" value="1" /><label class = "full" for="star1-e" ></label>
+            </fieldset>
+          </div>
+          <div class="form-group">
+            <textarea ng-model="review.comments" name="name" class="form-control" placeholder="Comentarios..."></textarea>
+          </div>
+          <div class="form-group">
+            <button {{action}} type="submit" class="btn btn-primary btn-block">Review</button>
+          </div>
+        </form>
       </div>
-
-      <div class="form-group">
-        <label>Habilidad</label>
-        <input type="radio" ng-model="review.rating" value="1">1&#9733;
-        <input type="radio" ng-model="review.rating" value="2">2&#9733;
-        <input type="radio" ng-model="review.rating" value="3">3&#9733;
-        <input type="radio" ng-model="review.rating" value="4">4&#9733;
-        <input type="radio" ng-model="review.rating" value="5">5&#9733;
-      </div>
-
-      <div class="form-group">
-        <label>Empatia</label>
-        <input type="radio" ng-model="review.ratingEmpatia" value="1">1&#9733;
-        <input type="radio" ng-model="review.ratingEmpatia" value="2">2&#9733;
-        <input type="radio" ng-model="review.ratingEmpatia" value="3">3&#9733;
-        <input type="radio" ng-model="review.ratingEmpatia" value="4">4&#9733;
-        <input type="radio" ng-model="review.ratingEmpatia" value="5">5&#9733;
-      </div>
-
-      <div class="form-group">
-        <label>Comentarios</label>
-        <textarea ng-model="review.comments"></textarea>
-      </div>
-
-      <div class="actions">
-        <label></label>
-        <button>{{action}} review</button>
-      </div>
-  </form>
+    </div>
+  </div>
+  
 <section>

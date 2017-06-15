@@ -8,17 +8,17 @@
   "properties": {
     "ciudad": {
       "type": "string",
-      "required": true,
+      "required": false,
       "default": "Zapotlan el Grande"
     },
     "estado": {
       "type": "string",
-      "required": true,
+      "required": false,
       "default": "Jalisco"
     },
     "pais": {
       "type": "string",
-      "required": true,
+      "required": false,
       "default": "México"
     },
     "direccion": {
@@ -26,29 +26,35 @@
     },
     "telefono": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "fechanac": {
       "type": "date",
-      "required": true
+      "required": false
     },
     "aniosprofesional": {
-      "type": "number"
+      "type": "number",
+      "required": false
     },
     "carrera": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "linkedin": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "proyecto1": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "proyecto2": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "proyecto3": {
-      "type": "string"
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],

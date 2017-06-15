@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8">
@@ -8,31 +8,49 @@
     <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <h1>Tecnologías revisadas</h1>
-      <h2 ng-show="currentUser">Bienvenido {{currentUser.email}}</h2>
-      <nav>
-        <ul>
-          <li ng-hide="currentUser">
-            <a ui-sref="sign-up" ui-sref-active="active">Sign up</a>
-          </li>
-          <li ng-show="currentUser">
-            <a ui-sref="my-reviews" ui-sref-active="active">Mis Revisiones</a>
-          </li>
-          <li ng-show="currentUser">
-            <a ui-sref="add-review" ui-sref-active="active">Agregar Revisión</a>
-          </li>
-          <li ng-hide="currentUser">
-            <a ui-sref="login" ui-sref-active="active">Log in</a>
-          </li>
-          <li ng-show="currentUser">
-            <a ui-sref="logout" ui-sref-active="active">Log out</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <nav class="navbar navbar-default">
+           <div class="container-fluid">
+             <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand">Tecnologías revisadas</a>
+             </div>
+             <div id="navbar" class="navbar-collapse collapse">
+               <ul class="nav navbar-nav">
+                 <li ng-show="currentUser" >
+                   <a ui-sref="my-reviews" ui-sref-active="active" >Mis Revisiones</a>
+                 </li>
+                 <li ng-show="currentUser" >
+                   <a ui-sref="add-review" ui-sref-active="active" >Agregar Revisión</a>
+                 </li>
+                 <li ng-show="currentUser" >
+                   <a ui-sref="logout" ui-sref-active="active" >Log out</a>
+                 </li>
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                 <li ng-hide="currentUser">
+                   <a  ui-sref="sign-up" ui-sref-active="active"> Sing up</a>
+                 </li>
+                 <li ng-hide="currentUser" >
+                   <a ui-sref="login" ui-sref-active="active" > Log in</a>
+                 </li>
+                 <li ng-show="currentUser">
+                   <a >Bienvenido <small>{{ currentUser.email }}</a>
+                 </li>
+               </ul>
+             </div><!--/.nav-collapse -->
+           </div><!--/.container-fluid -->
+         </nav>
 
-    <main ui-view></main>
+    <div class="container-fluid">
+
+      <main ui-view></main>
+
+    </div>
 
     <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/angular-resource/angular-resource.min.js"></script>

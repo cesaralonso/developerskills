@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Developer Skills</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="css/style.css" rel="stylesheet">
     <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
@@ -12,9 +13,6 @@
       <h2 ng-show="currentUser">Hola {{currentUser.email}}</h2>
       <nav>
         <ul>
-          <!--<li>
-            <a ui-sref="all-reviews" ui-sref-active="active">All reviews</a>
-          </li>-->
           <li ng-hide="currentUser">
             <a ui-sref="sign-up" ui-sref-active="active">Sign up</a>
           </li>
@@ -29,9 +27,6 @@
           </li>
           <li ng-show="currentUser">
             <a ui-sref="logout" ui-sref-active="active">Log out</a>
-          </li>
-          <lii ng-show="currentUser">
-            <a ui-sref="all-users" ui-sref-active="active">All Users</a>
           </li>
         </ul>
       </nav>

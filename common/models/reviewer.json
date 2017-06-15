@@ -5,7 +5,52 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "ciudad": {
+      "type": "string",
+      "required": true,
+      "default": "Zapotlan el Grande"
+    },
+    "estado": {
+      "type": "string",
+      "required": true,
+      "default": "Jalisco"
+    },
+    "pais": {
+      "type": "string",
+      "required": true,
+      "default": "México"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string",
+      "required": true
+    },
+    "fechanac": {
+      "type": "date",
+      "required": true
+    },
+    "aniosprofesional": {
+      "type": "number"
+    },
+    "carrera": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "proyecto1": {
+      "type": "string"
+    },
+    "proyecto2": {
+      "type": "string"
+    },
+    "proyecto3": {
+      "type": "string"
+    }
+  },
   "validations": [],
   "relations": {
     "reviews": {

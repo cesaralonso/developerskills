@@ -1,24 +1,23 @@
-<section> 
+<section>
   <h2>Log In</h2>
   <hr>
-  <form name="form" class="col-md-offset-5 col-md-3"ng-submit="login()">
+  <div class="container" ng-submit="login()">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1">
 
-      <div class="form-group">
-        <label>Email</label>
-        <input class="form-control" type="email" ng-model="user.email" placeholder="jonhdoe@example.com">
-        <p class="hint" ng-show="form.email.$error.required && submitted"> Email is required</p>
+        <form class="form-login">
+          <h4>Welcome!</h4>
+          <hr>
+          <input  ng-model="user.email" type="text" class="form-control" placeholder="email@example.com">
+          <p class="hint text-danger" ng-show="form.email.$error.required && submitted"> Email is required</p>
+          <br>
+
+          <input  ng-model="user.password" type="password" class="form-control "placeholder="······">
+          <p class="hint text-danger" ng-show="form.password.$error.required && submitted"> Password is required</p>
+          <br>
+          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </form>
       </div>
-
-      <div class="form-group">
-        <label class="form-control-label">Password</label>
-        <input type="password" class="form-control" ng-model="user.password" placeholder="·······">
-        <p class="hint" ng-show="form.password.$error.required && submitted">
-            Password is required</p>
-      </div>
-
-      <div class="actions">
-        <button class="btn btn-primary">Login</button>
-      </div>
-  </form>
-
+    </div>
+  </div>
 <section>

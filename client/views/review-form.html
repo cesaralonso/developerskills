@@ -1,0 +1,43 @@
+<section>
+  <form name="form" ng-submit="submitForm()">
+    <fieldset>
+      <legend>{{action}} revisión</legend>
+
+      <div class="form-group">
+        <label>Tecnología</label>
+        <select
+            ng-disabled="isDisabled"
+            ng-model="selectedTechnology"
+            ng-options="technology as technology.name for technology in technologies"></select>
+      </div>
+
+      <div class="form-group">
+        <label>Habilidad</label>
+        <input type="radio" ng-model="review.rating" value="1">1&#9733;
+        <input type="radio" ng-model="review.rating" value="2">2&#9733;
+        <input type="radio" ng-model="review.rating" value="3">3&#9733;
+        <input type="radio" ng-model="review.rating" value="4">4&#9733;
+        <input type="radio" ng-model="review.rating" value="5">5&#9733;
+      </div>
+
+      <div class="form-group">
+        <label>Empatia</label>
+        <input type="radio" ng-model="review.ratingEmpatia" value="1">1&#9733;
+        <input type="radio" ng-model="review.ratingEmpatia" value="2">2&#9733;
+        <input type="radio" ng-model="review.ratingEmpatia" value="3">3&#9733;
+        <input type="radio" ng-model="review.ratingEmpatia" value="4">4&#9733;
+        <input type="radio" ng-model="review.ratingEmpatia" value="5">5&#9733;
+      </div>
+
+      <div class="form-group">
+        <label>Comentarios</label>
+        <textarea ng-model="review.comments"></textarea>
+      </div>
+
+      <div class="actions">
+        <label></label>
+        <button>{{action}} review</button>
+      </div>
+    </fieldset>
+  </form>
+<section>

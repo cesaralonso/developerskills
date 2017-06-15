@@ -1,0 +1,22 @@
+{
+  "name": "developerskills",
+  "license": "MIT",
+  "version": "0.0.0",
+  "homepage": "https://cesardesarrollo@bitbucket.org/cesardesarrollo/developerskills",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-animate": "1.5.7",
+    "angular-resource": "1.5.7",
+    "angular-ui-router": "0.3.0",
+    "bootstrap": "~3.3.4",
+    "moment": "2.13.0"
+  }
+}

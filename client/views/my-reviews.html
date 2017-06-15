@@ -1,0 +1,17 @@
+<section>
+  <article ng-repeat="review in reviews.slice().reverse()">
+    <header>
+      <h1>{{review.reviewer.realm}} | {{review.technology.name}}</h1>
+      <h2>{{review.reviewer.email}}</h2>
+    </header>
+
+    <p>Habilidad: {{review.rating}}&#9733;</p>
+    <p>Empatia: {{review.ratingEmpatia}}&#9733;</p>
+    <p>{{review.comments}}</p>
+
+    <div class="actions" ng-show="currentUser">
+      <button ui-sref="edit-review({ id: review.id })">Edit</button>
+      <button a ui-sref="delete-review({ id: review.id })">Delete</button>
+    </div>
+  </article>
+</section>

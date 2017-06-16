@@ -1,17 +1,29 @@
 <section>
-  <article ng-repeat="review in reviews.slice().reverse()">
-    <header>
-      <h1>{{review.reviewer.realm}} | {{review.technology.name}}</h1>
-      <h2>{{review.reviewer.email}}</h2>
-    </header>
+  <h2>Todas Mis Revisiones</h2>
+  <hr>
+  <div class="row container">
+    <div class="col-md-4 col-sm-6 " ng-repeat="review in reviews.slice().reverse()">
+      <div class="panel">
+         <span class="header-text">{{review.technology.name}} |</span>  <span class="sub-header-text">{{review.reviewer.email}} </span>
+      </div>
+      <div class="panel-body">
+        <div>
+          <ul class="list-unstyled">
+            <li>
+              <span class="header-text">{{review.rating}}  </span><span class="text-medium">Habilidad </span>
+            </li>
+            <li>
+              <span class="header-text">{{review.ratingEmpatia}}   </span><span class="text-medium">Empatia </span>
+            </li><br>
+            <li>
+              <p class="text-justify text-medium"><emm>{{review.comments}} </emm><br>  <small>-{{review.reviewer.realm}}</small> </p>
+            </li>
+          </ul>
+        </div>
+          <a  ui-sref="edit-review({ id: review.id })" class="btn btn-warning">Edit</a>
+          <a  a ui-sref="delete-review({ id: review.id })" class="btn btn-danger">Delete</a>
+      </div>
 
-    <p>Habilidad: {{review.rating}}&#9733;</p>
-    <p>Empatia: {{review.ratingEmpatia}}&#9733;</p>
-    <p>{{review.comments}}</p>
-
-    <div class="actions" ng-show="currentUser">
-      <button ui-sref="edit-review({ id: review.id })">Edit</button>
-      <button a ui-sref="delete-review({ id: review.id })">Delete</button>
     </div>
-  </article>
+  </div>
 </section>

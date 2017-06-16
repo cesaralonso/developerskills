@@ -29,11 +29,21 @@
   border-radius : 5px;
   margin        : 20px 0;
 }
+.divider {
+  height        : 1px;
+  background    : #C4C4C4;
+  border-bottom : 1px solid #C4C4C4;
+  border-radius : 5px;
+  margin        : 5px 0;
+}
 
 .rating-content {
   display        : flex;
   flex-direction : row;
   align-items    : center;
+}
+.header-number {
+  font-size : 2.5em;
 }
 .header-text {
   font-size : 2em;
@@ -44,4 +54,14 @@
 
 .text-medium {
   font-size: 1.3em;
+}
+
+.marco {
+  padding       : 2em .5em;
+  margin        : .5em;
+  border-right  : 2px solid #CDCDCD;
+  border-bottom : 3px solid #CDCDCD;
+  border-left   : 1px solid #CDCDCD;
+  border-top    : 1px solid #CDCDCD;
+  border-radius : 10px;
 }

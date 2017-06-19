@@ -1,12 +1,10 @@
 <section>
-  <h2>Log In</h2>
-  <hr>
   <div class="container" ng-submit="login()">
     <div class="row">
       <div class="col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1">
 
         <form class="form-login">
-          <h4>Bienvenido de nuevo!</h4>
+          <h2 class="header-form">¡Bienvenido de nuevo!</h2>
           <div class="line-bottom"></div>
           <input  ng-model="user.email" type="text" class="form-control" placeholder="email@example.com">
           <p class="hint text-danger" ng-show="form.email.$error.required && submitted"> Email is required</p>
@@ -17,6 +15,8 @@
           <br>
           <button type="submit" class="btn btn-primary btn-block">Log in</button>
         </form>
+
+
       </div>
     </div>
   </div>

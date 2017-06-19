@@ -7,54 +7,104 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/star-rating.css" rel="stylesheet">
+    <link href="css/lightblue.css" rel="stylesheet">
     <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
   </head>
   <body>
-      <nav class="navbar navbar-default">
-           <div class="container-fluid">
-             <div class="navbar-header">
-               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                 <span class="sr-only">Toggle navigation</span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand">Tecnologías revisadas</a>
-             </div>
-             <div id="navbar" class="navbar-collapse collapse">
-               <ul class="nav navbar-nav">
-                 <li ng-show="currentUser" >
-                   <a ui-sref="my-reviews" ui-sref-active="active" >Mis Revisiones</a>
-                 </li>
-                 <li ng-show="currentUser" >
-                   <a ui-sref="add-review" ui-sref-active="active" >Agregar Revisión</a>
-                 </li>
-                 <li ng-show="currentUser" >
-                   <a ui-sref="logout" ui-sref-active="active" >Log out</a>
-                 </li>
-               </ul>
-               <ul class="nav navbar-nav navbar-right">
-                 <li ng-hide="currentUser">
-                   <a  ui-sref="sign-up" ui-sref-active="active"> Sing up</a>
-                 </li>
-                 <li ng-hide="currentUser" >
-                   <a ui-sref="login" ui-sref-active="active" > Log in</a>
-                 </li>
-                 <li ng-show="currentUser">
-                   <a >Bienvenido <small>{{ currentUser.email }}</a>
-                 </li>
-               </ul>
-             </div><!--/.nav-collapse -->
-           </div><!--/.container-fluid -->
-         </nav>
+  <header role="banner" id="fh5co-header">
+ 			<div class="container">
+ 				<!-- <div class="row"> -->
+ 			    <nav class="navbar navbar-default">
+ 		        <div class="navbar-header">
+ 		        	<!-- Mobile Toggle Menu Button -->
 
-    <div class="container-fluid">
+ 					      <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+ 		          	<a class="navbar-brand" href="#">Tecnologías</a>
+ 		        </div>
+ 		        <div id="navbar" class="navbar-collapse collapse">
+ 		          <ul class="nav navbar-nav navbar-right">
+ 		            <li ng-show="currentUser">
+                  <a ui-sref="my-reviews" ui-sref-active="active"><span>Mis Revisiones</span></a>
+                </li>
+ 		            <li ng-show="currentUser">
+                  <a ui-sref="add-review" ui-sref-active="active"><span>Agregar revisión</span></a>
+                </li>
+
+
+                <li class="">
+                  <a class="dropdown-toggle" data-toggle="dropdown"><img class="d-inline-block align-top" src="assets/user.png" width="30" height="30"></a>
+                  <ul class="dropdown-menu " style="background-color:rgba(0,0,0,0.1);" >
+
+                    <li  ng-show="currentUser">
+                      <a ui-sref="logout" ui-sref-active="active"><span>Log Out</span></a>
+                    </li>
+                    <li ng-hide="currentUser">
+                      <a ui-sref="sign-up" ui-sref-active="active"><span>Sign Up</span></a>
+                    </li>
+                    <li ng-hide="currentUser">
+                      <a ui-sref="login" ui-sref-active="active"><span>Log In</span></a>
+                    </li >
+                    <li ng-show="currentUser">
+                      <a ><span>Bienvenido <small>{{ currentUser.email }}</span></a>
+                    </li>
+                  </ul>
+                </li>
+
+ 		          </ul>
+ 		        </div>
+ 			    </nav>
+ 		  </div>
+  </header>
+  <!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <picture>
+        <source srcset="assets/react-mobile.png" media="(max-width: 640px)">
+        <source srcset="assets/react.png">
+        <img class="img-responsive" src="assets/react.png" alt="react">
+      </picture>
+    </div>
+    <div class="item">
+      <picture>
+        <source srcset="assets/angular-mobile.jpg" media="(max-width: 640px)">
+        <source srcset="assets/angular.jpg">
+        <img class="img-responsive" src="assets/angular.jpg" alt="angular">
+      </picture>
+    </div>
+
+    <div class="item">
+      <picture>
+        <source srcset="assets/nodejs-mobile.png" media="(max-width: 640px)">
+        <source srcset="assets/nodejs.jpg">
+        <img class="img-responsive" src="assets/nodejs.jpg" alt="nodejs">
+      </picture>
+    </div>
+  </div>
+
+</div>
+<!-- /.carousel -->
+
+    <div class="container-fluid content">
 
       <main ui-view></main>
 
     </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted text-left">Derechos reservados ® 2017</p>
+    </div>
+  </footer>
 
     <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/angular-resource/angular-resource.min.js"></script>
@@ -67,6 +117,5 @@
     <script src="js/controllers/review.js"></script>
     <script src="js/controllers/all-users.js"></script>
     <script src="js/services/auth.js"></script>
-
   </body>
 </html>

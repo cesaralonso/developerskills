@@ -3,34 +3,21 @@
   <hr>
   <div class="row container">
     <div class="col-md-4 col-sm-6" ng-repeat="review in reviews.slice().reverse()">
-      <div class="marco">
-       <span class="header-text text-primary">{{review.technology.name}} |</span>  <span class="sub-header-text text-muted">{{review.reviewer.email}} </span>
-        <div class="line-bottom"></div>
-        <div class="panel-body">
-          <div>
-            <ul class="list-unstyled">
-              <li class="text-center">
-                <span class="header-number text-muted">{{review.rating}}  </span><span class="text-medium">Habilidad </span>
-                <div class="divider"></div>
-              </li>
-              <li class="text-center">
-                <span class="header-number text-muted">{{review.ratingEmpatia}}   </span><span class="text-medium">Empatia </span>
-                <div class="divider"></div>
 
-              </li><br>
-              <li>
-                <p class="text-justify text-medium text-info"><emm>{{review.comments}} </emm><br>  <small>-{{review.reviewer.realm}}</small> </p>
-                <div class="divider"></div>
-              </li>
-            </ul>
-          </div>
-          <div class="pull-right">
+      <div class="card">
+        <img class="img-responsive"ng-src="assets/{{review.technology.name}}.png" alt="technology" style="width:100%">
+        <div class="card-container">
+          <h4><b>{{ review.technology.name}} |</b> <small>{{review.reviewer.email}}</small></h4>
+          <span class="header-number">{{review.rating}} </span><span class="text-medium">Habilidad</span><br>
+          <span class="header-number">{{review.ratingEmpatia}} </span><span class="text-medium">Empatia</span><br>
+          <span class="text-justify">{{ review.comments}} <small>-{{ review.reviewer.realm}}</small></span>
+          <hr>
+          <div>
             <a  ui-sref="edit-review({ id: review.id })" class="btn btn-info">Edit</a>
             <a  a ui-sref="delete-review({ id: review.id })" class="btn btn-danger">Delete</a>
           </div>
         </div>
       </div>
-
 
     </div>
   </div>
